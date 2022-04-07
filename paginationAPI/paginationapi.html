@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            border: 1px solid red;
+            width: 600px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .data{
+            width: 600px;
+            border: 1px solid red;
+        }
+        .title{
+            display: flex;
+            justify-content: space-around;
+        }
+        .body2{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pagination Api(No pagination Request in api)</h1>
+    <div class="data">
+        <header class="title">
+            <span>id</span>
+            <span>name</span>
+            <span>size</span>
+        </header>
+        <hr>
+        <div id="body1">
+            <!-- <div class="body2">
+                <span id="id">mm</span>
+                <span id="name">mm</span>
+                <span id="size">mm</span>
+            </div>
+            <div class="body2">
+                <span id="id">mm</span>
+                <span id="name">mm</span>
+                <span id="size">mm</span>
+            </div> -->
+        </div>
+    </div>
+    <div class="btn">
+        <button id="first">First</button>
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="last">Last</button>
+    </div>
+</body>
+</html>
+<script src="./paginationapi.js" defer type="module">
+    import {getData,appendData} from "./paginationapi.js"
+    const body1=document.getElementById("body1")
+    console.log(getData());
+</script>
