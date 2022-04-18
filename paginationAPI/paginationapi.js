@@ -1,13 +1,13 @@
 // fetch("https://api.coinbase.com/v2/currencies")
 // .then((res)=>res.json())
 // .then((data)=>console.log(data.data))
+const body1=document.getElementById("body1")
 const url="https://api.coinbase.com/v2/currencies"
 function getData(url){
 const data=fetch(url)
 data.then((res)=>res.json())
-.then((data1)=>console.log(data1.data))
+.then((data1)=>appendData(data1.data,body1))
 .catch((err)=>console.log(err.message))
-console.log(data)
 }
 getData(url)
 

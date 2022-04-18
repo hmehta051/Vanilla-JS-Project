@@ -8,6 +8,18 @@
 // const arr2=[5,6,7,8]
 // console.log(arr1.concat(arr2))
 // console.log([...arr1,...arr2])
+// let obj={
+//     name:"masai",
+//     age:6
+// }
+// let obj1={
+//     name:"masai",
+//     age:6
+// }
+// console.log(JSON.stringify(obj)==JSON.stringify(obj1))
+
+
+
 
 // const personTwo={
 //     name:"sally",
@@ -18,12 +30,13 @@
 //         state:"another"
 //     }
 // }
-// //const {name:firstname="john",food="mango",age}=personTwo
-// //const {name:firstname,...rest}=personTwo
+// const {name:firstname="john",food="mango",age}=personTwo
+// const {name:firstname,...rest}=personTwo
 // const {name:firstname,add:{city}}=personTwo
-// //console.log(firstname,food)
-// //console.log(rest)
-// console.log(city)
+// console.log(firstname,food)
+//console.log(rest)
+//console.log(city,firstname)
+
 
 //OBJECT OVERIDE
 // const personTwo={
@@ -37,9 +50,9 @@
 // }
 // const personOne={
 //     name:"rohit",
-//     age:32
+//     age:23
 // }
-// const personThree={...personTwo,...personOne}
+// const personThree={...personOne,...personTwo}
 // console.log(personThree)
 
 // ARROW FUNCTION
@@ -53,28 +66,30 @@ ADVANTAGES
 
 DISADNATGES
 */
+
 // class Person{
-//     constructor(name){
+//     constructor(name,age){
 //         this.name=name
+//         this.age=age
 //     }
 //     printNameArrow(){
 //         setTimeout(()=>{
-//             // console.log(this,"k")
-//             // console.log(this.name)
+//              //console.log(this,"k")
+//             console.log(this.name,this.age)
 //         },1000)
 //     }
 //     printNameNormal(){
 //         setTimeout(function(){
-//             this.name="j"
-//             console.log("this",this)
-//             console.log(this.name)
+//             // this.name="j"
+//             //console.log("this",this)
+//             console.log(this.name,this.age)
 //         },1000)
 //     }
 // }
-// let person=new Person("bob")
+// let person=new Person("bob",23)
 // person.printNameArrow()
 // person.printNameNormal()
-// console.log(this.name)
+//console.log(this.name)
 
 // const cameras={
 //     price:300,
@@ -92,8 +107,8 @@ DISADNATGES
 //         return `this camera is of ${this.price} ${this.weight}`
 //     }
 // }
-// let a=cameras.des.bind(this)
-// console.log(a())
+// let a=cameras.des.bind(cameras,300,2000)
+// console.log(a)
 // abc()
 // var abc=()=>{
 //     console.log("hoisted")
@@ -290,7 +305,31 @@ polyfill is a piece code used to provide modern functionality on older browser t
 // const months=['jan','march','april','june']
 // months.splice(1,2,'feb')
 // console.log(months)
+//let arr=[1,2,3]
+// arr=arr.filter((el)=>{
+//     if(el!==2){
+//         return el
+//     }
+// })
+// console.log(arr)
+// let temp;
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]==2){
+//         temp=i
+//     }
+// }
+// let arr1=[]
+// let temp1=0
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i]!=2){
+//         arr1[temp1]=arr[i]
+//         temp1++
+//     }
+// }
+// console.log(arr1)
 
+// arr.splice(1,1)
+// console.log(arr)
 //CALLBACK FUNCTION
 
 // function x(y){
